@@ -15,7 +15,10 @@
                 </p>
             </div>
             <div class="contentFooter">
-                <input class="like" type="image" :src="require('@/assets/images/like.jpg')" style="width:76;height:48px;"/>
+                <input class="like" type="image" :src="require('@/assets/images/like.jpg')" style="width:48;height:48px;"/>
+                <p class = "likes">
+                    {{post.likes}} 
+                </p>
             </div>
         </div>
     </div>
@@ -47,13 +50,19 @@
         height: 50px;
     }
     .contentBox{ /* The container for the contents of a post */
-        display: flex;
+        /*display: flex; */
         justify-content: center;
         box-shadow: 5px 5px 5px gray;
         margin: 20px;
         flex-direction: column;
         border: wheat;
     }
+
+    .contentFooter{
+        display: fixed;
+        flex-direction: row;
+    }
+
     input[type="submit"] {
         width: 50%;
         height: 40px;
